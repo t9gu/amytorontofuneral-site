@@ -1,0 +1,238 @@
+/* amytorontofuneral.ca — 现代信息架构改版
+   瑞士国际主义 × 信息设计 | 深松石绿 + 琥珀 + 纯白
+   松石绿 #15524B / 更深 #0C3631 / 琥珀 #CC8E2C / 纯白 #FFFFFF / 雾绿 #F2F6F4 */
+:root{
+  --teal:#15524B; --teal-deep:#0C3631; --teal-mid:#2E6A60; --teal-tint:#E5EEEB;
+  --amber:#CC8E2C; --amber-soft:#E3B25C; --amber-deep:#A9701C;
+  --paper:#FFFFFF; --mist:#F2F6F4; --mist-2:#EAF1EE;
+  --ink:#172420; --body:#33433D; --muted:#5C6B65; --line:#E0E7E3;
+  --serif:"Noto Serif SC","Noto Serif TC",serif;
+  --sans:"Noto Sans SC","Noto Sans TC",system-ui,sans-serif;
+  --wrap:1100px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--sans);color:var(--body);background:var(--paper);line-height:1.8;font-size:16px;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--ink);line-height:1.4}
+a{color:var(--teal)}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+/* ---------- 顶栏（松石绿信息条） ---------- */
+.topbar{background:var(--teal-deep);color:#CFE0DB;font-size:12.5px;letter-spacing:.03em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:6px;padding:8px 28px;flex-wrap:wrap}
+.topbar a{color:var(--amber-soft);text-decoration:none}
+.topbar a:hover{color:#fff}
+
+/* ---------- 主导航（纯白 · 精确网格） ---------- */
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.seal{width:40px;height:40px;background:var(--teal);color:#fff;font-family:var(--serif);font-size:21px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+.seal::after{content:"";position:absolute;right:-1px;bottom:-1px;width:9px;height:9px;background:var(--amber)}
+.brand b{font-family:var(--serif);font-size:16.5px;color:var(--ink);letter-spacing:.04em;display:block;line-height:1.25}
+.brand small{font-size:10.5px;color:var(--muted);letter-spacing:.18em;display:block;text-transform:uppercase}
+nav.main{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+nav.main a{text-decoration:none;color:var(--ink);font-size:14.5px;letter-spacing:.04em;padding:6px 0;position:relative}
+nav.main a:not(.cta-call)::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--amber);transition:right .25s}
+nav.main a:not(.cta-call):hover::after,nav.main a.on::after{right:0}
+nav.main a.on{color:var(--teal)}
+.cta-call{background:var(--teal);color:#fff!important;padding:9px 18px;font-weight:500;white-space:nowrap;letter-spacing:.04em}
+.cta-call:hover{background:var(--teal-deep)}
+
+/* ---------- 英雄区（松石绿 + 等高线签名） ---------- */
+.hero{position:relative;background:var(--teal);color:#EAF2EF;overflow:hidden;
+  /* 想换成图里那种真实秋景照片：把下一行注释打开并替换路径即可
+  background-image:linear-gradient(100deg,rgba(12,54,49,.92),rgba(21,82,75,.78)),url('hero.jpg');
+  background-size:cover;background-position:center; */
+}
+.hero::before{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke='%23E3B25C' stroke-width='1.2' opacity='0.16'%3E%3Cpath d='M-50 130 C 250 70 500 190 800 130 S 1300 70 1300 130'/%3E%3Cpath d='M-50 230 C 250 170 500 290 800 230 S 1300 170 1300 230'/%3E%3Cpath d='M-50 330 C 250 270 500 390 800 330 S 1300 270 1300 330'/%3E%3Cpath d='M-50 430 C 250 370 500 560 800 430 S 1300 370 1300 430'/%3E%3Cpath d='M-50 520 C 250 470 500 600 800 520 S 1300 470 1300 520'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:cover;pointer-events:none}
+.hero .wrap{position:relative;padding:88px 28px 74px}
+.hero-main{max-width:720px}
+.hero-tag{font-family:var(--serif);font-size:15px;letter-spacing:.34em;color:var(--amber-soft);margin-bottom:22px}
+.hero h1{font-size:clamp(28px,4.2vw,44px);color:#fff;margin-bottom:20px;line-height:1.3}
+.hero h1 em{font-style:normal;color:var(--amber-soft)}
+.lede{font-size:17px;line-height:1.85;color:#D7E5E0;max-width:660px}
+.lede strong{color:#fff;font-weight:500}
+.hero-actions{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 30px;text-decoration:none;font-size:15px;letter-spacing:.05em;font-weight:500;transition:transform .15s,background .2s}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--amber);color:#fff}
+.btn-gold:hover{background:var(--amber-deep)}
+.btn-ghost{border:1px solid rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.hero-meta{margin-top:22px;font-size:13px;color:#A9C4BD;letter-spacing:.03em}
+
+/* 统计条（信息设计核心 · 更深松石绿） */
+.stats{position:relative;background:var(--teal-deep);border-top:1px solid rgba(255,255,255,.08)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:0 28px}
+.stats-grid>div{padding:26px 8px;text-align:center;border-left:1px solid rgba(255,255,255,.08)}
+.stats-grid>div:first-child{border-left:none}
+.stats-grid b{font-family:var(--serif);font-size:clamp(26px,3.4vw,36px);color:#fff;display:block;line-height:1.1;letter-spacing:.02em}
+.stats-grid b i{font-style:normal;font-size:.5em;color:var(--amber-soft);margin-left:2px}
+.stats-grid span{font-size:12.5px;color:#9FBBB4;letter-spacing:.1em;margin-top:6px;display:block}
+
+/* ---------- 区块通用 ---------- */
+section{padding:70px 0}
+section.alt{background:var(--mist)}
+.eyebrow{font-size:12px;letter-spacing:.26em;color:var(--amber-deep);font-family:var(--sans);font-weight:500;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:11px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--amber);display:inline-block}
+h2.sec{font-size:clamp(23px,2.8vw,31px);margin-bottom:14px;letter-spacing:.02em}
+.sec-intro{max-width:730px;color:var(--muted);margin-bottom:40px;font-size:15.5px}
+
+/* ---------- 服务卡（线性图标网格） ---------- */
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--paper);padding:32px 28px;transition:background .2s}
+.card:hover{background:var(--mist)}
+.ico{width:48px;height:48px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--teal);margin-bottom:18px;background:var(--mist);transition:.2s}
+.ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.card:hover .ico{background:var(--teal);color:#fff;border-color:var(--teal)}
+.card h3{font-size:17.5px;margin-bottom:10px;color:var(--ink)}
+.card p{font-size:14.5px;color:var(--body)}
+.card p a{color:var(--teal);font-weight:500;white-space:nowrap}
+
+/* ---------- 信任条 ---------- */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.trust div{background:var(--paper);padding:26px 24px;position:relative}
+.trust b{font-family:var(--serif);color:var(--teal);display:block;margin-bottom:7px;font-size:16px;padding-left:16px}
+.trust b::before{content:"";position:absolute;left:24px;top:30px;width:7px;height:7px;background:var(--amber)}
+.trust p{font-size:13.5px;color:var(--muted);padding-left:16px}
+
+/* ---------- 表格 ---------- */
+table{width:100%;border-collapse:collapse;background:var(--paper);font-size:14.5px;border:1px solid var(--line)}
+th{background:var(--teal);color:#fff;text-align:left;padding:13px 16px;font-weight:500;letter-spacing:.04em;font-size:14px}
+td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--body)}
+tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--mist)}
+td b{color:var(--ink)}
+.tip{font-size:13px;color:var(--muted);margin-top:12px}
+
+/* ---------- 步骤（真实流程才编号） ---------- */
+ol.steps{list-style:none;counter-reset:s;max-width:780px}
+ol.steps li{counter-increment:s;position:relative;padding:0 0 28px 66px;min-height:48px}
+ol.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:-4px;width:46px;height:46px;
+  border:1px solid var(--teal);color:var(--teal);font-family:var(--serif);font-size:16px;
+  display:flex;align-items:center;justify-content:center;background:var(--paper)}
+ol.steps li::after{content:"";position:absolute;left:23px;top:46px;bottom:2px;width:1px;background:var(--line)}
+ol.steps li:last-child::after{display:none}
+ol.steps b{font-family:var(--serif);color:var(--teal)}
+
+/* ---------- 墓园卡 ---------- */
+.cem{background:var(--paper);border:1px solid var(--line);padding:26px;border-top:3px solid var(--teal)}
+.cem h3{font-size:17px;color:var(--ink)}
+.cem .en{font-size:11.5px;color:var(--amber-deep);letter-spacing:.12em;margin:4px 0 12px;text-transform:uppercase}
+.cem p{font-size:14px;color:var(--muted)}
+.cem a{font-size:13.5px;color:var(--teal);font-weight:500}
+
+/* ---------- 评价 ---------- */
+.quote{background:var(--paper);border:1px solid var(--line);border-left:3px solid var(--amber);padding:24px 26px;font-size:14.5px;color:var(--body)}
+.quote::before{content:"★★★★★";display:block;color:var(--amber);font-size:13px;letter-spacing:3px;margin-bottom:12px}
+.quote footer{margin-top:14px;font-size:13px;color:var(--muted);font-family:var(--serif);letter-spacing:.06em}
+
+/* ---------- FAQ 手风琴 ---------- */
+details{background:var(--paper);border:1px solid var(--line);margin-bottom:10px}
+details[open]{border-color:var(--teal-mid)}
+summary{cursor:pointer;padding:19px 54px 19px 22px;font-family:var(--serif);font-size:16.5px;color:var(--ink);
+  letter-spacing:.02em;list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:22px;top:50%;width:11px;height:11px;margin-top:-6px;
+  border-right:2px solid var(--amber);border-bottom:2px solid var(--amber);transform:rotate(45deg);transition:transform .2s}
+details[open] summary{color:var(--teal)}
+details[open] summary::after{transform:rotate(-135deg)}
+details .a{padding:0 22px 20px;font-size:15px;color:var(--body)}
+.faq-h{font-size:18px;margin:44px 0 18px;color:var(--ink);font-family:var(--serif);
+  padding-left:15px;border-left:4px solid var(--teal);letter-spacing:.03em}
+.byline{margin-top:42px;padding:20px 24px;background:var(--mist);border-left:3px solid var(--amber);font-size:13.5px;color:var(--muted)}
+
+/* ---------- 内页页头 ---------- */
+.pagehead{background:var(--mist);padding:54px 0 46px;border-bottom:1px solid var(--line);position:relative}
+.pagehead::after{content:"";position:absolute;left:0;bottom:-1px;width:120px;height:3px;background:var(--amber)}
+.pagehead h1{font-size:clamp(25px,3.2vw,34px);margin-bottom:14px;letter-spacing:.02em}
+.crumb{font-size:12.5px;color:var(--muted);margin-bottom:16px;letter-spacing:.04em}
+.crumb a{color:var(--muted);text-decoration:none}
+.crumb a:hover{color:var(--teal)}
+.answer-first{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--teal);
+  padding:24px 28px;max-width:840px;font-size:16px;line-height:1.85;color:var(--ink)}
+.answer-first strong{color:var(--teal)}
+
+/* ---------- 联系条 ---------- */
+.contact-band{background:var(--teal-deep);color:#D7E5E0;padding:64px 0;position:relative;overflow:hidden}
+.contact-band::before{content:"";position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 400' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill='none' stroke='%23E3B25C' stroke-width='1' opacity='0.1'%3E%3Cpath d='M-50 120 C 300 60 600 200 900 120 S 1300 60 1300 120'/%3E%3Cpath d='M-50 240 C 300 180 600 320 900 240 S 1300 180 1300 240'/%3E%3C/g%3E%3C/svg%3E");background-size:cover;pointer-events:none}
+.contact-band .wrap{position:relative}
+.contact-band h2{color:#fff;font-size:clamp(23px,2.6vw,29px);margin-bottom:6px}
+.contact-band .eyebrow{color:var(--amber-soft)}
+.contact-band .phone{font-family:var(--serif);font-size:clamp(30px,4.4vw,42px);color:var(--amber-soft);
+  text-decoration:none;display:inline-block;margin:14px 0;letter-spacing:.03em}
+.contact-band .phone:hover{color:#fff}
+.contact-band p{font-size:14.5px;color:#BFD4CE}
+.contact-band a{color:#EAF2EF}
+
+/* ---------- 页脚 ---------- */
+footer.site{background:var(--ink);color:#9DAaa4;font-size:13px;padding:38px 0}
+footer.site .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer.site b{color:#E7ECE9!important}
+footer.site a{color:#C2CCC8;text-decoration:none}
+footer.site a:hover{color:var(--amber-soft)}
+.foot-nap{line-height:2}
+
+/* ---------- 响应式 ---------- */
+@media(max-width:880px){
+  .g3,.g2,.trust{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid>div:nth-child(3){border-left:none}
+  .stats-grid>div:nth-child(1),.stats-grid>div:nth-child(2){border-bottom:1px solid rgba(255,255,255,.08)}
+  nav.main{gap:14px;font-size:13.5px}
+  header.site .wrap{flex-wrap:wrap}
+  .hero .wrap{padding:60px 28px 54px}
+}
+@media(max-width:560px){
+  .stats-grid{grid-template-columns:1fr}
+  .stats-grid>div{border-left:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  .topbar .wrap{font-size:11.5px}
+}
+
+/* ====== 图片增强（仿参考稿）====== */
+/* 英雄区铺真实秋景照片，松石绿渐变叠加保证白字可读 */
+.hero{
+  background-image:linear-gradient(100deg,rgba(12,54,49,.93) 0%,rgba(21,82,75,.82) 48%,rgba(21,82,75,.55) 100%),url('images/hero-banner.jpg');
+  background-size:cover;background-position:center}
+.hero::before{opacity:.7}
+
+/* 关于 Amy：左图右文 */
+.about-band{display:grid;grid-template-columns:0.85fr 1.15fr;gap:0;border:1px solid var(--line);background:var(--paper)}
+.about-photo{background-size:cover;background-position:center;min-height:340px}
+.about-text{padding:40px 42px}
+.about-text .eyebrow{margin-bottom:12px}
+.about-text h2{font-size:clamp(21px,2.4vw,27px);margin-bottom:16px;color:var(--ink)}
+.about-text p{color:var(--body);font-size:15px;margin-bottom:14px}
+.about-text p:last-child{margin-bottom:0}
+.about-cta{margin-top:6px}
+.about-cta a{color:var(--teal);font-weight:500;text-decoration:none}
+
+/* 墓园介绍双图 */
+.cem-photos{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:30px}
+.cem-photo{position:relative;overflow:hidden;border:1px solid var(--line)}
+.cem-photo img{width:100%;height:260px;object-fit:cover;display:block;transition:transform .5s}
+.cem-photo:hover img{transform:scale(1.04)}
+.cem-photo figcaption{position:absolute;left:0;bottom:0;right:0;
+  background:linear-gradient(transparent,rgba(12,54,49,.85));color:#fff;
+  padding:26px 18px 14px;font-family:var(--serif);font-size:15px;letter-spacing:.04em}
+
+/* 联系区配图 */
+.contact-grid{display:grid;grid-template-columns:1.25fr 0.75fr;gap:40px;align-items:center}
+.contact-photo{border:3px solid rgba(227,178,92,.3)}
+.contact-photo img{width:100%;height:100%;min-height:280px;object-fit:cover;display:block}
+
+@media(max-width:880px){
+  .about-band{grid-template-columns:1fr}
+  .about-photo{min-height:240px}
+  .cem-photos,.contact-grid{grid-template-columns:1fr}
+  .contact-photo{display:none}
+}
