@@ -13,9 +13,18 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:title" content="多倫多華人福地·骨灰龕位·殯儀一條龍服務">
 <meta property="og:url" content="https://amytorontofuneral.ca/zh-hant/">
+<meta property="og:site_name" content="Amy Toronto 多倫多華人福地殯儀服務">
+<meta property="og:image" content="https://amytorontofuneral.ca/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://amytorontofuneral.ca/images/og-cover.jpg">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preload" as="image" href="../images/hero-banner.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=4">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -25,7 +34,12 @@
   "url": "https://amytorontofuneral.ca/zh-hant/",
   "telephone": "+1-647-649-9188",
   "email": "ahuang@arbormemorial.com",
+  "image": "https://amytorontofuneral.ca/images/og-cover.jpg",
+  "logo": "https://amytorontofuneral.ca/favicon.svg",
   "address": {"@type":"PostalAddress","streetAddress":"12492 Woodbine Avenue","addressLocality":"Gormley","addressRegion":"ON","postalCode":"L0H 1G0","addressCountry":"CA"},
+  "geo": {"@type":"GeoCoordinates","latitude":43.949,"longitude":-79.362},
+  "hasMap": "https://goo.gl/maps/rKb8AHFadTWeivEY9",
+  "contactPoint": {"@type":"ContactPoint","contactType":"customer service","telephone":"+1-647-649-9188","availableLanguage":["Cantonese","Mandarin","English"],"hoursAvailable":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}},
   "areaServed": ["Toronto","Markham","Richmond Hill","North York","Scarborough","Mississauga","Vaughan","Ajax","Oakville"],
   "availableLanguage": ["yue","zh-Hant","zh-Hans","en"],
   "parentOrganization": {"@type":"Organization","name":"Arbor Memorial","foundingDate":"1947"},
@@ -124,8 +138,8 @@
   <h2 class="sec">服務嘅四大墓園</h2>
   <p class="sec-intro">四園均屬 Arbor Memorial（1947 年成立，已服務超過 100 萬戶加拿大家庭），設有華人專區並尊重傳統習俗。</p>
   <div class="cem-photos">
-    <figure class="cem-photo"><img src="../images/cemetery-garden.jpg" alt="多倫多華人紀念墓園花園景觀，依山傍水嘅安息環境" loading="lazy"><figcaption>依山傍水嘅紀念花園 · 室外土葬同骨灰位</figcaption></figure>
-    <figure class="cem-photo"><img src="../images/columbarium-interior.jpg" alt="室內骨灰龕位大樓，有暖氣冷氣，四季拜祭都舒適" loading="lazy"><figcaption>室內骨灰龕位大樓 · 有暖氣冷氣，四季拜祭舒適</figcaption></figure>
+    <figure class="cem-photo"><img src="../images/cemetery-garden.jpg" alt="多倫多華人紀念墓園花園景觀，依山傍水嘅安息環境" loading="lazy" width="1200" height="675"><figcaption>依山傍水嘅紀念花園 · 室外土葬同骨灰位</figcaption></figure>
+    <figure class="cem-photo"><img src="../images/columbarium-interior.jpg" alt="室內骨灰龕位大樓，有暖氣冷氣，四季拜祭都舒適" loading="lazy" width="1200" height="675"><figcaption>室內骨灰龕位大樓 · 有暖氣冷氣，四季拜祭舒適</figcaption></figure>
   </div>
   <div class="grid g2">
     <div class="cem"><h3>高山紀念墓園</h3><p class="en">HIGHLAND MEMORY GARDENS · 北約克</p>
@@ -157,7 +171,39 @@
       <p>微信：1.647.649.9188 ／ AmyHuangToronto（Amy四寶媽）<br>
       電郵：ahuang@arbormemorial.com　·　地址：12492 Woodbine Avenue, Gormley, ON L0H 1G0</p>
     </div>
-    <div class="contact-photo"><img src="../images/memorial-flowers.jpg" alt="紀念白百合花束 In Loving Memory，寄託對先人嘅追思" loading="lazy"></div>
+    <div class="contact-photo"><img src="../images/memorial-flowers.jpg" alt="紀念白百合花束 In Loving Memory，寄託對先人嘅追思" loading="lazy" width="1200" height="800"></div>
+  </div>
+
+  <div class="lead-form-box" id="lead-form">
+    <h3>在線預約 · 留言諮詢</h3>
+    <p class="lf-sub">留低聯絡方式，Amy 會喺 24 小時內用電話或微信回覆您；緊急情況請直接打熱線。您嘅資料只會用嚟回覆今次諮詢。</p>
+    <form data-lead-form>
+      <input type="checkbox" name="botcheck" class="lf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="lead-form-grid">
+        <div><label for="lf-name">稱呼 *</label><input id="lf-name" name="称呼" required placeholder="例如：陳生 / 王太"></div>
+        <div><label for="lf-phone">電話 *</label><input id="lf-phone" name="电话" type="tel" required placeholder="例如：416-000-0000"></div>
+        <div><label for="lf-wechat">微信號（選填）</label><input id="lf-wechat" name="微信号" placeholder="方便微信聯絡可以填"></div>
+        <div><label for="lf-topic">諮詢類型</label>
+          <select id="lf-topic" name="咨询类型">
+            <option>提前規劃（長生位）</option>
+            <option>預約參觀墓園</option>
+            <option>骨灰龕位選購</option>
+            <option>殯儀白事（急事）</option>
+            <option>骨灰跨境／執骨移靈</option>
+            <option>其他</option>
+          </select></div>
+        <div class="lf-full"><label for="lf-time">方便回電時段</label>
+          <select id="lf-time" name="方便回电时段">
+            <option>任何時間</option>
+            <option>上晝（9:00–12:00）</option>
+            <option>下晝（12:00–18:00）</option>
+            <option>夜晚（18:00–21:00）</option>
+          </select></div>
+        <div class="lf-full"><label for="lf-msg">留言（選填）</label><textarea id="lf-msg" name="留言" placeholder="簡單講低您嘅情況，例如：想幫父母提前規劃，兩個位，預算大概…"></textarea></div>
+      </div>
+      <button class="btn btn-gold" type="submit">提交預約</button>
+      <p class="lf-privacy">提交即表示同意 Amy 用電話或微信聯絡您。諮詢免費，冇任何購買義務。</p>
+    </form>
   </div>
 </div></section>
 
@@ -174,5 +220,7 @@
   </div>
 </div></footer>
 
+<script src="../assets/js/lead.js?v=4" defer></script>
+<script src="../assets/js/chat.js?v=4" defer></script>
 </body>
 </html>
