@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness","Cemetery"],
+      "@type": "ProfessionalService",
       "@id": "https://amytorontofuneral.ca/#business",
       "name": "Amy Toronto 多伦多华人墓地与殡仪服务",
       "alternateName": ["多倫多華人福地殯儀服務","Chinese Funeral & Cemetery Services Toronto"],
@@ -41,14 +41,10 @@
       "priceRange": "$$",
       "image": "https://amytorontofuneral.ca/images/og-cover.jpg",
       "logo": "https://amytorontofuneral.ca/favicon.svg",
-      "address": {"@type":"PostalAddress","streetAddress":"12492 Woodbine Avenue","addressLocality":"Gormley","addressRegion":"ON","postalCode":"L0H 1G0","addressCountry":"CA"},
-      "geo": {"@type":"GeoCoordinates","latitude":43.949,"longitude":-79.362},
-      "hasMap": "https://goo.gl/maps/rKb8AHFadTWeivEY9",
       "contactPoint": {"@type":"ContactPoint","contactType":"customer service","telephone":"+1-647-649-9188","availableLanguage":["Cantonese","Mandarin","English"],"hoursAvailable":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}},
       "knowsAbout": ["华人墓地购买","骨灰位","殡仪服务","生前预置计划","风水选址","CPP 丧葬补助","骨灰跨境运送"],
       "areaServed": ["Ontario","Toronto","Markham","Richmond Hill","North York","Scarborough","Mississauga","Vaughan","Ajax","Oakville"],
       "availableLanguage": ["zh-Hans","zh-Hant","yue","en"],
-      "parentOrganization": {"@type":"Organization","name":"Arbor Memorial","url":"https://www.arbormemorial.ca/","foundingDate":"1947"},
       "sameAs": ["https://www.youtube.com/@AmySibaoma","https://www.xiaohongshu.com/user/profile/5e7178b80000000001002671"]
     },
     {
@@ -57,7 +53,7 @@
       "name": "Amy Huang",
       "alternateName": ["Amy四宝妈","黄涓婕"],
       "jobTitle": "持牌墓园总监 兼 殡仪预先规划师 (Licensed Cemetery Director & Funeral Pre-Planner)",
-      "worksFor": {"@id":"https://amytorontofuneral.ca/#business"},
+      "worksFor": {"@type":"Organization","name":"Arbor Memorial","url":"https://www.arbormemorial.ca/","foundingDate":"1947"},
       "knowsLanguage": ["Cantonese","Mandarin","English"],
       "telephone": "+1-647-649-9188",
       "email": "ahuang@arbormemorial.com",
@@ -212,7 +208,7 @@
       <a class="phone" href="tel:6476499188">647-649-9188</a>
       <p>微信：1.647.649.9188 ／ AmyHuangToronto（Amy四宝妈）<br>
       邮箱：<a href="mailto:ahuang@arbormemorial.com">ahuang@arbormemorial.com</a><br>
-      办公地址：12492 Woodbine Avenue, Gormley, ON L0H 1G0<br>
+      服务范围：大多伦多地区（GTA），可预约墓园现场或上门咨询<br>
       可咨询：提前规划 · 墓园参观 · 殡仪预置计划 · 殡仪服务与仪式 · 火葬土葬服务</p>
     </div>
     <div class="contact-photo"><img src="images/memorial-flowers.jpg" alt="纪念白百合花束 In Loving Memory，寄托对逝者的追思" loading="lazy" width="1200" height="800"></div>
@@ -255,7 +251,7 @@
   <div class="foot-nap">
     <b style="color:#E3DED2;font-family:var(--serif)">Amy Huang ｜ Arbor Memorial 持牌墓园总监兼殡仪预先规划师</b><br>
     电话/微信：647-649-9188 ｜ 邮箱：ahuang@arbormemorial.com<br>
-    12492 Woodbine Avenue, Gormley, ON L0H 1G0
+    服务范围：大多伦多地区（GTA）
   </div>
   <div class="foot-nap">
     <a href="https://www.youtube.com/@AmySibaoma" rel="noopener">YouTube：@AmySibaoma</a><br>
