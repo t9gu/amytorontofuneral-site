@@ -1,0 +1,20 @@
+# amytorontofuneral.ca Lead 后端（Cloudflare Worker）
+# 部署步骤见 ../docs/lead-tracking-setup.md
+name = "amy-leads"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+[vars]
+# 允许跨域调用的站点（逗号分隔，可加本地调试地址）
+ALLOWED_ORIGINS = "https://amytorontofuneral.ca,https://www.amytorontofuneral.ca,https://t9gu.github.io"
+# Web3Forms Access Key —— 用来把 AI 客服 lead 与来电记录以邮件发出
+# （与网站表单可用同一个 key；在 https://web3forms.com 免费申请）
+WEB3FORMS_KEY = "62eaa61a-13e7-426a-9575-c356fbaf9f6b"
+# lead 通知同时抄送的邮箱（Web3Forms 后台配置主收件人，这里仅作邮件内容标注）
+NOTIFY_EMAIL = "ahuang@arbormemorial.com"
+# 每个 IP 每 10 分钟最多对话轮数（防滥用）
+RATE_LIMIT = "20"
+
+# 机密（不要写在这个文件里！）：
+#   npx wrangler secret put GEMINI_API_KEY
+#   （key 从 https://aistudio.google.com 免费申请，Flash 模型免费额度每天 1500 次请求）
